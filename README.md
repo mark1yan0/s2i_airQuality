@@ -44,7 +44,7 @@ Inoltre ho separato lo sviluppo in develpment e production.</p>
 <h3 id="contact">Contact</h3>
 <p>Markiyan Kmit - business.kmit@gmail.com</p>
 
-<p>Project Link: https://github.com/your_username/repo_name</p>
+<p>Project Link: https://nervous-bhabha-b42b4b.netlify.app/</p>
 
 <h3 id="acknowledgements">Acknowledgements</h3>
 
