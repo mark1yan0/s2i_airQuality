@@ -11,6 +11,8 @@ module.exports = {
       template: './template.html',
       inject: 'body',
     }),
-    new Dotenv(),
+    new Dotenv({
+      systemvars: true,
+    }),
   ],
 };
