@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* typography
+========================================*/
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.7rem;
+}
+
+#air-quality .air-quality {
+  font-size: 10rem;
+}
+
+/* Heading
+========================================*/
+.heading {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.46);
+}
+
+.description {
+  text-align: center;
+}
+
+/* Main
+========================================*/
+main {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.padding {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.46);
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.467);
+}
+
+/* Data
+========================================*/
+main .data-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main #air-quality {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Search
+========================================*/
+#search-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#search-container .search {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  font-size: 1.7rem;
+}
+
+#search-container .search:focus {
+  outline: none;
+}
+
+#search-container .btn-search {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 1.2rem;
+  height: 36px;
+  width: 60px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+#search-container .btn-search i {
+  transition: 0.5s ease;
+}
+
+#search-container .btn-search i:hover {
+  transform: translateX(5px);
+  color: #6bd160;
+}
+
+/* Map
+========================================*/
+main #mapid {
+  width: 900px;
+  height: 600px;
+}
+
+/* Error popup
+========================================*/
+.error {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  background: rgba(0, 202, 0, 0.748);
+  padding: 50px;
+  z-index: 1000;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.error .error-btn {
+  width: 50%;
+  padding: 10px 0;
+  margin: 10px auto;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.show-error {
+  visibility: visible;
+}
+
+/*Info
+======================================*/
+.information {
+  width: 1200px;
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px solid rgba(0, 0, 0, 0.46);
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.467);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links a {
+  color: #6bd160;
+  text-decoration: none;
+}
+
+.s2i {
+  text-align: center;
+}
+
+/*Loading animation
+======================================*/
+.searching {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  visibility: hidden;
+}
+
+.searching i {
+  color: black;
+  animation: spin 1s infinite linear;
+  font-size: 5rem;
+}
+
+.show {
+  visibility: visible;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*mobile*/
+@media only screen and (max-width: 920px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .data-container {
+    width: 100% !important;
+    height: 40vh;
+    text-align: center;
+  }
+
+  .map-container {
+    width: 100%;
+  }
+
+  .map-container #mapid {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .searching {
+    position: absolute;
+    top: 50%;
+    right: 40%;
+  }
+
+  .error {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .information {
+    width: 100%;
+  }
+}
