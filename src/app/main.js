@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
     //getting geolocation
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
-    location.innerHTML = `<h2>Your current location<br>Latitude: ${lat.toFixed(
+    location.innerHTML = `<h2 class='location-text'>Your current location<br>Latitude: ${lat.toFixed(
       2
     )}<br> Longitude: ${long.toFixed(2)}</h2>`;
     const api = `https://api.waqi.info/feed/geo:${lat};${long}/?token=${API_TOKEN}`;

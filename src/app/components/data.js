@@ -47,44 +47,56 @@ export function displayData(lat, long, cityName, airQuality) {
 
   //good
   if (0 <= airQuality && airQuality <= 50) {
-    qualityContainer.style.background = '#6bd160'; //green
+    qualityContainer.style.background =
+      'linear-gradient(100deg, rgba(107,218,63,1) 0%, rgba(0,167,25,1) 100%)'; //green
     infoContainer.innerHTML = `<h3>Good</h3><br><p>${info.good[0]}</p><br><p>${info.good[1]}</p>`;
-    infoContainer.style.background = '#6bd160';
+    infoContainer.style.background =
+      'linear-gradient(100deg, rgba(107,218,63,1) 0%, rgba(0,167,25,1) 100%)';
   }
   //moderate
   if (51 <= airQuality && airQuality <= 100) {
-    qualityContainer.style.background = '#fcfa5b'; //yellow
+    qualityContainer.style.background =
+      'linear-gradient(248deg, rgba(254,255,93,1) 0%, rgba(255,239,0,1) 100%)'; //yellow
     infoContainer.innerHTML = `<h3>Moderate</h3><br><p>${info.moderate[0]}</p><br><p>${info.moderate[1]}</p>`;
-    infoContainer.style.background = '#fcfa5b';
+    infoContainer.style.background =
+      'linear-gradient(248deg, rgba(254,255,93,1) 0%, rgba(255,239,0,1) 100%)';
   }
   //unhealty for sensitive groups
   if (101 <= airQuality && airQuality <= 150) {
-    qualityContainer.style.background = '#ffb14a'; //orange
+    qualityContainer.style.background =
+      'linear-gradient(252deg, rgba(255,177,50,1) 0%, rgba(255,136,0,1) 100%)'; //orange
     infoContainer.innerHTML = `<h3>Unhealty for sensitive groups</h3><br><p>${info.s_unhealthy[0]}</p><br><p>${info.s_unhealthy[1]}</p>`;
-    infoContainer.style.background = '#ffb14a';
+    infoContainer.style.background =
+      'linear-gradient(252deg, rgba(255,177,50,1) 0%, rgba(255,136,0,1) 100%)';
   }
   //unhealty
   if (151 <= airQuality && airQuality <= 200) {
-    qualityContainer.style.background = '#ff1212'; //red
+    qualityContainer.style.background =
+      'linear-gradient(252deg, rgba(255,50,50,1) 0%, rgba(255,171,75,1) 100%)'; //red
     qualityContainer.color = 'white';
     infoContainer.innerHTML = `<h3>Unhealty</h3><br><p>${info.unhealthy[0]}</p><br><p>${info.unhealthy[1]}</p>`;
-    infoContainer.style.background = '#ff1212';
+    infoContainer.style.background =
+      'linear-gradient(252deg, rgba(255,50,50,1) 0%, rgba(255,171,75,1) 100%)';
     infoContainer.color = 'white';
   }
   //very unhealty
   if (201 <= airQuality && airQuality <= 300) {
-    qualityContainer.style.background = '#c800ff'; //purple
+    qualityContainer.style.background =
+      'linear-gradient(310deg, rgba(149,0,255,1) 0%, rgba(187,13,255,1) 100%'; //purple
     qualityContainer.color = 'white';
     infoContainer.innerHTML = `<h3>Very unhealty</h3><br><p>${info.v_unhealthy[0]}</p><br><p>${info.v_unhealthy[1]}</p>`;
-    infoContainer.style.background = '#c800ff';
+    infoContainer.style.background =
+      'linear-gradient(310deg, rgba(149,0,255,1) 0%, rgba(187,13,255,1) 100%';
     infoContainer.color = 'white';
   }
   //hazardous
   if (airQuality > 300) {
-    qualityContainer.style.background = '#a82d00'; //brown
+    qualityContainer.style.background =
+      'linear-gradient(125deg, rgba(101,54,0,1) 0%, rgba(170,68,0,1) 100%)'; //brown
     qualityContainer.color = 'white';
     infoContainer.innerHTML = `<h3>Hazardous</h3><br><p>${info.hazardous[0]}</p><br><p>${info.hazardous[1]}</p>;`;
-    infoContainer.style.background = '#a82d00';
+    infoContainer.style.background =
+      'linear-gradient(125deg, rgba(101,54,0,1) 0%, rgba(170,68,0,1) 100%)';
     infoContainer.color = 'white';
   }
 }

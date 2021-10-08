@@ -6,6 +6,14 @@
 
 /* typography
 ========================================*/
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: 'Yaldevi', sans-serif;
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -28,6 +36,10 @@ p {
 
 /* Heading
 ========================================*/
+body {
+  background-image: linear-gradient(115deg, #fee140 0%, #fa7099 100%);
+}
+
 .heading {
   width: 100%;
   height: 10vh;
@@ -35,8 +47,11 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.46);
+  padding: 1.5em 3em;
+}
+
+.location-text {
+  font-size: 1rem;
 }
 
 .description {
@@ -51,14 +66,18 @@ main {
   width: 1200px;
   margin: 0 auto;
   position: relative;
+  padding: 1em 0;
 }
 
 .padding {
-  padding: 10px;
+  padding: 2em;
   margin: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.46);
   border-radius: 15px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.467);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.467);
+}
+
+.map-container {
+  padding: 0.5em;
 }
 
 /* Data
@@ -127,16 +146,19 @@ main #mapid {
 /* Error popup
 ========================================*/
 .error {
-  width: 500px;
-  height: 200px;
+  width: 80%;
+  height: 80%;
   position: absolute;
-  top: 30%;
-  left: 40%;
-  background: rgba(0, 202, 0, 0.748);
+  top: 10%;
+  left: 10%;
+  background: rgb(0, 202, 0);
   padding: 50px;
   z-index: 1000;
   color: white;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   visibility: hidden;
 }
@@ -158,11 +180,11 @@ main #mapid {
 ======================================*/
 .information {
   width: 1200px;
-  padding: 10px;
+  padding: 2em;
   margin: 20px auto;
-  border: 1px solid rgba(0, 0, 0, 0.46);
+
   border-radius: 15px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.467);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.467);
 }
 
 .links {
@@ -171,12 +193,13 @@ main #mapid {
 }
 
 .links a {
-  color: #6bd160;
+  color: #131313;
   text-decoration: none;
 }
 
 .s2i {
   text-align: center;
+  margin-bottom: 2em;
 }
 
 /*Loading animation
@@ -231,6 +254,11 @@ main #mapid {
 
   header {
     width: 100%;
+    padding: 10px !important;
+  }
+
+  .location-text {
+    font-size: 0.7rem;
   }
 
   main {
@@ -242,18 +270,21 @@ main #mapid {
   }
 
   .data-container {
-    width: 100% !important;
     height: 40vh;
+    width: 100% !important;
     text-align: center;
+    border-radius: 0;
+    order: 1;
   }
 
   .map-container {
     width: 100%;
+    order: 0;
+    padding: 1em;
   }
 
   .map-container #mapid {
     margin: 0 auto;
-    width: 100%;
   }
 
   .searching {
@@ -271,5 +302,6 @@ main #mapid {
 
   .information {
     width: 100%;
+    border-radius: 0;
   }
 }
