@@ -285,6 +285,7 @@ main #mapid {
 
   .map-container #mapid {
     margin: 0 auto;
+    height: 300px;
   }
 
   .searching {
